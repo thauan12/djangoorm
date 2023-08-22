@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+        <!-- Main Content-->
+        <main class="mb-4 main-spacing">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="my-5">
+                            <form method="post" id="formularioTurma" data-sb-form-api-token="API_TOKEN">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <br />
+                                <button class="btn btn-primary text-uppercase" id="botaoEnviar" type="submit">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+{% endblock %}
